@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card" >
+        <img class="card-img-top" src="{{movie.image.url}}" width="500" height="400" alt="">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.name}}({{movie.year}})</h5>
+    <p class="card-text">{{movie.description}}</p>
+    <a href="{% url 'movieapp:update' movie.id %}" class="btn btn-warning"> Update</a>
+      <a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">Delete</a>
+  </div>
+</div>
+    </div>
+    </div>
+</div>
+
+
+<!--{{movie.name}}-{{movie.year}}<br>-->
+<!--<img src="{{movie.image.url}}" width="200" height="200"><br>-->
+<!--{{movie.description}}<br>-->
+<!--<a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}">Update</a>-->
+<!--<a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}">Delete</a>-->
+
+{% endblock %}
